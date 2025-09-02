@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salon David J | Staff Console</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Staff-specific styles */
+    .calendar-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .calendar-table th,
+    .calendar-table td {
+      border: 1px solid #021026;
+      padding: 0.3rem;
+      text-align: center;
+      vertical-align: top;
+      height: 60px;
+      position: relative;
+    }
+    .calendar-table th {
+      background-color: #021026;
+      color: #00b3b3;
+      font-weight: 600;
+    }
+    .calendar-table td.time {
+      background-color: #021026;
+      color: #00b3b3;
+      font-weight: 500;
+      width: 80px;
+    }
+    .appointment-entry {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      border-radius: 0.25rem;
+      padding: 0.15rem;
+      font-size: 0.7rem;
+      overflow: hidden;
+    }
+    .status-selector {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      font-size: 0.6rem;
+      color: #021026;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 0.2rem;
+      padding: 0.1rem 0.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Salon David J</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Book</a>
+      <a href="location.html">Location</a>
+      <a href="staff.html" class="active">Staff</a>
+    </nav>
+  </header>
+  <main>
+    <h2 style="color: #00b3b3; margin-bottom: 1rem;">Staff Console</h2>
+    <p>View and manage appointments for the current week. Click an appointment's status to advance it.</p>
+    <div id="calendarContainer"></div>
+  </main>
+  <footer>
+    <p>© 2025 Salon David J. All rights reserved.</p>
+  </footer>
+  <script src="services.js"></script>
+  <script src="staff.js"></script>
+</body>
+</html>
