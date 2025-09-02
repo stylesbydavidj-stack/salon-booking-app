@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salon David J | Book an Appointment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Salon David J</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html" class="active">Book</a>
+      <a href="location.html">Location</a>
+    </nav>
+  </header>
+  <main>
+    <h2 style="color: #00b3b3; margin-bottom: 1rem;">Book an Appointment</h2>
+    <!-- Category selector -->
+    <div id="categoryBar" class="category-bar"></div>
+    <!-- Services grid -->
+    <div id="servicesGrid" class="services-grid"></div>
+    <!-- Booking form (will appear when a service is selected) -->
+    <div id="bookingFormContainer" style="display: none; margin-top: 2rem;">
+      <h3 style="color: #00b3b3; margin-bottom: 0.5rem;">Appointment Details</h3>
+      <form id="bookingForm">
+        <div style="margin-bottom: 1rem;">
+          <label for="appointmentDate">Select Date:</label><br />
+          <input type="date" id="appointmentDate" required />
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <label for="appointmentTime">Select Time:</label><br />
+          <select id="appointmentTime" required>
+            <option value="">--Select time--</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <label for="clientName">Your Name:</label><br />
+          <input type="text" id="clientName" required />
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <label for="clientEmail">Email:</label><br />
+          <input type="email" id="clientEmail" required />
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <label for="clientPhone">Phone:</label><br />
+          <input type="tel" id="clientPhone" required />
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <input type="checkbox" id="policyCheck" required />
+          <label for="policyCheck" style="font-size: 0.9rem;">I agree to the salon's booking policies.</label>
+        </div>
+        <!-- deposit note will show depending on service -->
+        <div id="depositNote" style="margin-bottom: 1rem; font-size: 0.9rem; color: #ffc107; display: none;"></div>
+        <button type="submit" class="btn" id="confirmBtn" disabled>Confirm Appointment</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Salon David J. All rights reserved.</p>
+  </footer>
+  <script src="services.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>
