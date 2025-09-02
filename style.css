@@ -28,7 +28,11 @@ header {
 }
 
 nav a {
-  color: #ffffff;
+  
+  .logo img {
+  height: 40px;
+}
+color: #ffffff;
   text-decoration: none;
   margin-left: 1.5rem;
   font-weight: 500;
