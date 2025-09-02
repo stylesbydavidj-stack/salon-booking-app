@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salon David J | Owner Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .dashboard {
+      display: none;
+      margin-top: 1rem;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .stat-card {
+      background-color: #021026;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      flex: 1 1 200px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .stat-card h4 {
+      color: #00b3b3;
+      margin-bottom: 0.3rem;
+    }
+    .stat-card p {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .chart-container {
+      margin-top: 2rem;
+      background-color: #021026;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      height: 200px;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .bar {
+      flex: 1;
+      margin: 0 5px;
+      position: relative;
+    }
+    .bar div {
+      background-color: #00b3b3;
+      width: 100%;
+      border-radius: 0.2rem 0.2rem 0 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: #030a18;
+      font-size: 0.8rem;
+    }
+    .bar-label {
+      text-align: center;
+      margin-top: 0.3rem;
+      font-size: 0.8rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Salon David J</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Book</a>
+      <a href="location.html">Location</a>
+      <a href="staff.html">Staff</a>
+      <a href="owner.html" class="active">Owner</a>
+    </nav>
+  </header>
+  <main>
+    <h2 style="color: #00b3b3; margin-bottom: 1rem;">Owner Dashboard</h2>
+    <div id="loginSection">
+      <p style="margin-bottom: 0.5rem;">Please enter the password to access the dashboard:</p>
+      <input type="password" id="ownerPassword" placeholder="Password" />
+      <button id="ownerLoginBtn" class="btn" style="margin-left: 0.5rem;">Login</button>
+      <p id="loginError" style="color: #e8615a; margin-top: 0.5rem; display: none;">Incorrect password. Please try again.</p>
+    </div>
+    <div id="dashboard" class="dashboard">
+      <div class="stats">
+        <div class="stat-card">
+          <h4>Total Revenue</h4>
+          <p id="totalRevenue">$0</p>
+        </div>
+        <div class="stat-card">
+          <h4>Transactions</h4>
+          <p id="transactionsCount">0</p>
+        </div>
+        <div class="stat-card">
+          <h4>Average Sale</h4>
+          <p id="averageSale">$0</p>
+        </div>
+      </div>
+      <div class="chart-container">
+        <h4 style="color: #00b3b3;">Revenue by Hour</h4>
+        <div id="barChart" class="bar-chart"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Salon David J. All rights reserved.</p>
+  </footer>
+  <script src="services.js"></script>
+  <script src="owner.js"></script>
+</body>
+</html>
